@@ -1,7 +1,7 @@
 language: csharp
 solution: OwOShort.sln
 script:
-- msbuild /p:VbcToolExe=vbnc.exe /p:Configuration=Release OwOShort.sln
+- xbuild /p:VbcToolExe=vbnc.exe /p:Configuration=Release OwOShort.sln
 deploy:
   provider: releases
   user: "inventor02"
