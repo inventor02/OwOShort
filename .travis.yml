@@ -1,2 +1,4 @@
 language: csharp
 solution: OwOShort.sln
+script:
+  - xbuild /p:VbcToolExe=vbnc.exe /p:Configuration=Release OwOShort.sln
