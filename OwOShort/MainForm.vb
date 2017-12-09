@@ -11,7 +11,7 @@ Public Class MainForm
 
     Private Async Sub UpdateApp()
         Dim versionNumber As Version = Assembly.GetExecutingAssembly().GetName().Version
-        Dim mgr As UpdateManager = New UpdateManager("https://nuts.owoshort.georgepeppard.me/update/win32/" & versionNumber.ToString())
+        Dim mgr As UpdateManager = New UpdateManager("http://nuts.owoshort.georgepeppard.me/update/win32/" & versionNumber.ToString())
         Await mgr.UpdateApp()
     End Sub
 
