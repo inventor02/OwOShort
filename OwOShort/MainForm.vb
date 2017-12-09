@@ -6,7 +6,7 @@ Imports System.Reflection
 Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ActiveControl = LinkTextBox
-        UpdateApp()
+        'UpdateApp()
     End Sub
 
     Private Async Sub UpdateApp()
