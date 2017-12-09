@@ -1,9 +1,18 @@
 ﻿Imports RestSharp
 Imports System.Net
+Imports Squirrel
+Imports System.Reflection
 
 Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ActiveControl = LinkTextBox
+        UpdateApp()
+    End Sub
+
+    Private Async Sub UpdateApp()
+        Dim versionNumber As Version = Assembly.GetExecutingAssembly().GetName().Version
+        Dim mgr As UpdateManager = New UpdateManager("https://nuts.owoshort.georgepeppard.me/update/win32/" & versionNumber.ToString())
+        Await mgr.UpdateApp()
     End Sub
 
     Private Sub GoButton_Click(sender As Object, e As EventArgs) Handles GoButton.Click
